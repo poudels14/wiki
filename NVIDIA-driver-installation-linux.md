@@ -78,3 +78,5 @@ Note: I wasn't able to add the keys used for signing NVIDIA drivers to truested 
 			Option "RegistryDwords" "EnableBrightnessControl=1"
 		EndSection
 	```
+
+5. If the latop goes on suspend loop after waking up from suspend, add `button.lid_init_state=open` to `GRUB_CMDLINE_LINUX` in file `/etc/default/grub`. Run `sudo update-grub` to update grub and then reboot.
